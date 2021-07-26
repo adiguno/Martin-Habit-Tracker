@@ -1,20 +1,27 @@
-CREATE TYPE "habit_type" AS ENUM (
-  'daily',
-  'weekday',
-  'weekend',
+-- CREATE TYPE "habit_type" AS ENUM (
+--   'daily',
+--   'weekday',
+--   'weekend'
+-- );
+
+CREATE TYPE "status" AS ENUM (
+  'todo',
+  'in_progress',
+  'done'
 );
 
 CREATE TABLE "user" (
   "id" bigint,
   "username" varchar,
-  "password" varchar,
-  "habit_id" bigint
+  "password" varchar
 );
 
 CREATE TABLE "habit" (
   "id" bigint PRIMARY KEY,
-  "habit_type" enum,
-  "description" varchar
+  "user_id" bigint,
+  "days" varchar,
+  "description" varchar,
+  "status" enum
 );
 
-ALTER TABLE "habit" ADD FOREIGN KEY ("id") REFERENCES "user" ("id");
+ALTER TABLE "habit" ADD FOREIGN KEY ("user_id") REFERENCES "user" ("id");

@@ -6,10 +6,13 @@
     - not to overwhelm you with a 'lifelong' streak to maintain, so you can get started
 - a month has 2 cycles
 - 3 trackers
-    - success +
-    - failure x
-    - neutral o
+    - success 👍
+    - failure 👎
+    - neutral 
         - failures beyond your control 
 - dedicated 'failure notes' section on why failures happen
 - dedicated 'cycle review' section on things you've learned or want to change, once this cycle is over
 - flexible everyday, weekday, weekend ... habits
+
+# tech
+- using Gorilla Mux
